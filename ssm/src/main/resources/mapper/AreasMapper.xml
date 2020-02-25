@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoshu.dao.AreasMapper">
+  <resultMap id="BaseResultMap" type="com.xiaoshu.entity.Areas">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="aname" jdbcType="VARCHAR" property="aname" />
+  </resultMap>
+  <select id="queryId" parameterType="string" resultType="Integer">
+    select id from areas where aname=#{aname}
+  </select>
+</mapper>
